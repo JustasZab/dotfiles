@@ -5,7 +5,7 @@ set -e
 trap 'echo "An error occurred. Cleaning up..." >&2' ERR
 
 # Configuration
-REPO_URL="your-repo-url-here"
+REPO_URL="https://github.com/JustasZab/dotfiles"
 REPO_DIR="${HOME}/.dotfiles"
 CONFIG_FILES=(
     ".zshrc"
