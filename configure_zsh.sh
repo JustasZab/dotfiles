@@ -56,7 +56,7 @@ install_oh_my_zsh() {
 
 install_plugin() {
     local repo=$1
-    local plugin_name=$(basename "$repo")
+    local plugin_name=${2:-$(basename "$repo")}
     local plugin_dir="${ZSH_CUSTOM}/plugins/${plugin_name}"
     
     if [ ! -d "$plugin_dir" ]; then
@@ -122,7 +122,7 @@ main() {
     install_plugin "zsh-users/zsh-syntax-highlighting"
     install_plugin "zsh-users/zsh-autosuggestions"
     install_plugin "zsh-users/zsh-history-substring-search"
-    install_plugin "MichaelAquilina/zsh-you-should-use"
+    install_plugin "MichaelAquilina/zsh-you-should-use" "you-should-use"
     
     install_powerlevel10k
     setup_tmux
