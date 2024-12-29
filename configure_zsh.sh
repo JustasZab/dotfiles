@@ -49,8 +49,8 @@ install_oh_my_zsh() {
         log "Installing Oh My Zsh..."
         sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     else
-        log "Updating Oh My Zsh..."
-        "${ZSH}/tools/upgrade.sh"
+        echo "Updating Oh My Zsh..."
+        ${ZSH}/tools/upgrade.sh || true
     fi
 }
 
